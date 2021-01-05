@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Add Movie</title>
+</head>
+<body style="background-color:#222222;"y>
+    <nav class="navbar navbar-expand-sm navbar-dark justify-content-center" style="background-color:#222222;">
+        <ul class="navbar-nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active " href="home_admin.html"><strong>HOME</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="add_movie.html"><strong>ADD MOVIE</strong></a>
+            </li>
+          </ul>
+    </nav>
+    <div class="d-flex justify-content-center">    
+        <h2 style="color: #e4e4e4;">Edit Movie</h2>
+    </div>
+    
+    <div class="d-flex justify-content-center" style="margin-top: 10px;">
+        
+        <form action="/product" method="POST" enctype="multipart/form-data" style="width: 1000px">
+    
+            <div class="from-group" >
+                <label for="title" style="color: #e4e4e4;">Title</label>
+                <input type="text" class="form-control" id="title" name="title">
+            </div>
+    
+            <div class="form-group">
+                <label for="synopsis" style="color: #e4e4e4;">Synopsis</label>
+                <textarea class="form-control" id="synopsis" name="synopsis" rows="3"></textarea>
+            </div>
+
+            <div class="from-group">
+                <label for="release" style="color: #e4e4e4;">Release Year</label>
+                <input type="number" class="form-control" id="release" name="release">
+            </div>
+
+            <div class="from-group" >
+                <label for="price" style="color: #e4e4e4;">Price</label>
+                <input type="text" class="form-control" id="price" name="price">
+            </div>
+            
+            <div class="custom-file" style="margin-top: 30px; margin-bottom: 30px">
+                <input type="file" class="custom-file-input" id="img_path" name="img_path">
+                <label class="custom-file-label" for="customFile">Upload Poster</label>
+            </div>
+            <div style="margin-top: 30px">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
