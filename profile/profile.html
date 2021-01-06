@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+  <style>
+    body{
+    margin: 0;
+    padding: 0;
+}
+
+#profile{
+    max-width: 500px;
+    margin:100px auto;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px #aaa;
+}
+#profile h2{
+    text-align: center;
+    padding: 25px 10px;
+    background-color: #0057A8;
+    color: #03033f;
+}
+fieldset{
+    margin: 0;
+    border: none;
+}
+form{
+    padding: 0;
+    margin: 0;
+    padding: 15px;
+}
+input[type='text'],
+input[type="email"], input[type='password']{
+    width: 80%;
+    padding: 1em;
+    margin-top: 1.2em;
+    color: #888;
+}
+
+input[type="submit"]{
+    width: 100%;
+    padding: 1.4em;
+    margin: 1.5em 0;
+    color: #888;
+    background-color:#0057A8 ;
+    border:none;
+    color:rgb(0, 0, 0);
+}
+
+input[type="submit"]:hover{
+    opacity: 0.8;
+    border-color: #699d9e;
+}
+
+form p{
+    text-align: center;
+    color: #888;
+    width: 30px;
+    margin: 10px auto 0;
+    background: #f9f9f9;
+    position: relative;
+    bottom: 20px;
+}
+
+.border-p{
+    border-top: 1px solid #888;
+    margin: 10px 10px;
+}
+
+button{
+    background-color: #0057A8;
+    width: 100%;
+    padding: 1.4em;
+    margin-bottom: 1em;
+    color: #888; ;
+    border:none;
+    color:#eee;
+    border-bottom: 4px solid transparent;
+}
+
+body {
+    background-image: url("images/bg-rebulm.png");
+    background-color: #cccccc;
+            
+}
+
+</style>
+</head>
+
+        <body id="page-top">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo-rebulm.png" alt="logo"
+                    style="width: 150px;">
+                </a>   
+
+        <h1 style="text-align: center; color:white; font-size:25pt">&ensp;WELCOME TO YOURS</h1>
+        <h1 style="text-align: center; color:white; font-size:25pt">&ensp;PROFILE</h1>
+    
+
+    <div id="profile">
+        <h2>MY PROFILE</h2>
+        <fieldset>
+        <form action = update.php method="POST">
+
+                <label>ID </label> <br>
+                <input type="text" name="id" placeholder="ID" > <br><br>
+
+                <label>Nama Lengkap</label> <br>
+                <input type="text" name="namalengkap" placeholder="Masukan Nama Lengkap" > <br><br>
+
+                <label>Email</label> <br>
+                <input type="email" name="Email" placeholder="Masukan Email" > <br><br>
+
+                <label>No.Hp</label> <br>
+                <input type="text" name="No_Hp" placeholder="Masukan No.Hp" > <br><br>
+
+                <label>Username</label> <br>
+                <input type="text" name="username" placeholder="Masukan Username" > <br><br>
+
+                <label>Password</label> <br>
+                <input type="password" name="pass" placeholder="Masukan Password" > <br><br>
+
+                <label>Kode Promo</label> <br>
+                <input type="text" name="kode" placeholder="Masukan Kode Promo" > <br><br>
+
+                <input type="submit" name="submit" value="Update">
+                <div class="border-p"></div>
+
+            </form>
+        </fieldset>
+    </div>
+
+        <p style="text-align: center; color: white;">Movie Store My Profile © All rights Reseverd </p>
+
+    </body>
+</html>

@@ -19,6 +19,12 @@ Route::get('/', function () {
 Route::get('/movies', function () {
     return view('videos');
 });
+Route::get('/profile', function () {
+    return view('profile');
+});
+Route::get('/review', function () {
+    return view('review');
+});
 Route::get('/login', function () {
     return view('login');
 });

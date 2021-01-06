@@ -41,7 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				margin:8px 0 0px 20px;
 				display: inline-block;">Movie</a>	
 	
-				<a href="#" style="color:#D0D0D0;
+				<a href="/profile" style="color:#D0D0D0;
 				font-size:1.35em;
 				letter-spacing:2px;
 				text-transform:uppercase;
@@ -92,7 +92,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
 							<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
 						</ul>
-						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
+						{{-- <a class="button play-icon popup-with-zoom-anim" href="/review">Watch now</a> --}}
+						<a class="button" href="/review">Watch now</a>
 					</div>
 					<div id="small-dialog" class="mfp-hide">
 						<iframe  src="https://www.youtube.com/embed/2LqzF5WauAw" frameborder="0" allowfullscreen></iframe>

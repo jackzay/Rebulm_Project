@@ -47,7 +47,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				margin:8px 0 0px 20px;
 				display: inline-block;">Movie</a>	
 
-				<a href="#" style="color:#D0D0D0;
+				<a href="/profile" style="color:#D0D0D0;
 				font-size:1.35em;
 				letter-spacing:2px;
 				text-transform:uppercase;
