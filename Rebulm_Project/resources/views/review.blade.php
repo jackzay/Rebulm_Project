@@ -18,57 +18,104 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Cinema Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+<style>
+.watch{
+            margin-left: 10%;
+            border:10 px black;
+            margin-top:50px;
+          
+        }	
+</style>
 </head>
 <body>
+<nav class="navbar navbar-dark navbar-expand-md bg-faded justify-content-center" style="background-color: rgb(36, 24, 24);">
+        <a href="/" class="navbar-brand d-flex w-50 mr-auto"
+            style="color:#D0D0D0; 
+            font-size:1.6em; 
+            letter-spacing:2px; 
+            text-transform:uppercase;">
+
+            <img src="images/logo.png" width="150" class="d-inline-block align-top" alt="">
+            &nbsp;| Movie </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+            <ul class="navbar-nav w-100 justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" 
+                        style="font-size:1.2em; 
+                        letter-spacing:1px; 
+                        text-transform:uppercase;"
+                    href="/">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" 
+                        style="font-size:1.2em; 
+                        letter-spacing:1px; 
+                        text-transform:uppercase;"
+                    href="/movies">Movies</a>
+                  </li>
+                  
+            </ul>
+            <ul class="nav navbar-nav mt-1 ml-auto w-100 justify-content-end">
+                <li class="nav-item">
+                    <div class="dropdown show ">
+                        <a class="btn btn-default dropdown-toggle"
+                          style="color:#D0D0D0; 
+                          font-size:1.2em; 
+                          /* letter-spacing:1px;  */
+                          /* text-transform:uppercase;" */
+                        href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Halo, User
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="/profile">Profile</a>
+                          <a class="dropdown-item" href="/">FaQ</a>
+                          <a class="dropdown-item" href="/login">Logout</a>
+                        </div>
+                      </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
 	<!-- header-section-starts -->
-	<div class="full">
-		<div class="single-content">
-			<div class="top-header span_top" style="background-color: rgb(36, 24, 24);">
-				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" alt="" /></a>
-					<p>Movie Theater</p>
-				</div>
-				<a href="/" style="color:#D0D0D0;
-				font-size:1.35em;
-				letter-spacing:2px;
-				text-transform:uppercase;
-				padding:4px 0 0px 20px;
-				margin:8px 0 0px 20px;
-				display: inline-block;">home</a>
-				
-				<a href="/movies" style="color:#D0D0D0;
-				font-size:1.35em;
-				letter-spacing:2px;
-				text-transform:uppercase;
-				padding:4px 0 0px 20px;
-				margin:8px 0 0px 20px;
-				display: inline-block;">Movie</a>	
 	
-				<a href="/profile" style="color:#D0D0D0;
-				font-size:1.35em;
-				letter-spacing:2px;
-				text-transform:uppercase;
-				padding:4px 0 0px 20px;
-				margin:8px 0 0px 20px;
-				display: inline-block;">Profile</a>
-				<div class="search v-search">
-					<form>
-						<input type="text" value="Search.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search..';}"/>
-						<input type="submit" value="">
-					</form>
-				</div>
+		
+				
 				<div class="clearfix"></div>
 			</div>
 			<div class="reviews-section">
-				<h3 class="head">Movie Reviews</h3>
-					<div class="col-md-9 reviews-grids">
-						<div class="review">
+			
+				
+					<div class="col-md-9 reviews-grids" style="background-color: rgb(36, 24, 24);color:white; left:10%; padding-top:20px">
+					<div class="watch">
+     
+	 					<iframe width="960" height="600"  src="https://www.youtube.com/embed/RWX2Kis5yYM" frameborder="0" style="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ 						</div> 
+						<div class="review" >
 							<div class="movie-pic">
-								<a href="single.html"><img src="images/r4.jpg" alt="" /></a>
+								<a href="single.html"><img src="images/SpidermanFFH.jpg" alt="" /></a>
 							</div>
-							<div class="review-info">
-								<a class="span" href="single.html">Lorem  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
+							
+							<div class="review-info" >
+							<hr size="10px">
+								<a class="span" href="single.html" style="color:white">Lorem  <i>Movie Review</i></a>
+								<p class="dirctr" style="color:white"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
 								<p class="ratingview">Critic's Rating:</p>
 								<div class="rating">
 									<span>☆</span>
@@ -93,24 +140,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								&nbsp; 3.3/5</p>
 								<div class="clearfix"></div>
 								<div class="yrw">
-									<div class="dropdown-button">           			
-										<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>
-										<option value="0">Your rating</option>	
-										<option value="1">1.Poor</option>
-										<option value="2">1.5(Below average)</option>
-										<option value="3">2.Average</option>
-										<option value="4">2.5(Above average)</option>
-										<option value="5">3.Watchable</option>
-										<option value="6">3.5(Good)</option>
-										<option value="7">4.5(Very good)</option>
-										<option value="8">5.Outstanding</option>
-									  </select>
-									</div>
-									<div class="rtm text-center">
-										<a href="#">REVIEW THIS MOVIE</a>
+								
+									<div class="wt text-center">
+										<a href="/transaksi">Rent 1 week</a>
 									</div>
 									<div class="wt text-center">
-										<a href="#">WATCH THIS TRAILER</a>
+										<a href="/transaksi">Buy this Movie</a>
+									</div>
+									<div class="wt text-center">
+										<a href="/menu">More</a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -121,24 +159,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="clearfix"></div>
 						</div>
-						<div class="single">
+						<div class="single" style="color:white">
 							<h3>Lorem Ipsum IS A TENSE, TAUT, COMPELLING THRILLER</h3>
 							<p>STORY:<i> Meera and Arjun drive down Lorem Ipsum - can they survive a highway from hell?</i></p>
 						</div>
-							<div class="best-review">
+							<div class="best-review" style="color:white">
 								<h4>Best Reader's Review</h4>
 								<p>Excellent Movie and great performance by Lorem, one of the finest thriller of recent  like Aldus PageMaker including versions of Lorem Ipsum.</p>
 								<p><span>Neeraj Upadhyay (Noida)</span> 16/03/2015 at 12:14 PM</p>
 							</div>
-							<div class="story-review">
+							<div class="story-review" style="color:white">
 								<h4>REVIEW:</h4>
 								<p>So,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 							</div>
 							<!-- comments-section-starts -->
-	    <div class="comments-section">
-	        <div class="comments-section-head">
-				<div class="comments-section-head-text">
-					<h3>25 Comments</h3>
+	    <div class="comments-section" style="color:white">
+	        <div class="comments-section-head" style="color:white">
+				<div class="comments-section-head-text" style="color:white">
+					<h3>Comments</h3>
 				</div>
 				<div class="clearfix"></div>
 		    </div>
@@ -202,162 +240,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 </div>
 		  </div>
 		  </div>
-					<div class="col-md-3 side-bar">
-						<div class="featured">
-							<h3>Featured Today in Movie Reviews</h3>
-							<ul>
-								<li>
-									<a href="single.html"><img src="images/f1.jpg" alt="" /></a>
-									<p>lorem movie review</p>
-								</li>
-								<li>
-									<a href="single.html"><img src="images/f2.jpg" alt="" /></a>
-									<p>lorem movie review</p>
-								</li>
-								<li>
-									<a href="single.html"><img src="images/f3.jpg" alt="" /></a>
-									<p>lorem movie review</p>
-								</li>
-								<li>
-									<a href="single.html"><img src="images/f4.jpg" alt="" /></a>
-									<p>lorem movie review</p>
-								</li>
-								<li>
-									<a href="single.html"><img src="images/f5.jpg" alt="" /></a>
-									<p>lorem movie review</p>
-								</li>
-								<li>
-									<a href="single.html"><img src="images/f6.jpg" alt="" /></a>
-									<p>lorem movie review</p>
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-						</div>
-						
-						<div class="entertainment">
-							<h3>Featured Today in Entertainment</h3>
-							<ul>
-								<li class="ent">
-									<a href="single.html"><img src="images/f6.jpg" alt="" /></a>
-								</li>
-								<li>
-									<a href="single.html">Watch ‘Bombay Velvet’ trailer during WC match</a>
-								
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-							<ul>
-								<li class="ent">
-									<a href="single.html"><img src="images/f5.jpg" alt="" /></a>
-								</li>
-									<li>
-									<a href="single.html">Watch ‘Bombay Velvet’ trailer during WC match</a>
-							
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-							<ul>
-								<li class="ent">
-									<a href="single.html"><img src="images/f3.jpg" alt="" /></a>
-								</li>
-								<li>
-									<a href="single.html">Watch ‘Bombay Velvet’ trailer during WC match</a>
-								
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-							<ul>
-								<li class="ent">
-									<a href="single.html"><img src="images/f4.jpg" alt="" /></a>
-								</li>
-								<li>
-									<a href="single.html">Watch ‘Bombay Velvet’ trailer during WC match</a>
-								
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-							<ul>
-								<li class="ent">
-									<a href="single.html"><img src="images/f2.jpg" alt="" /></a>
-								</li>
-								<li>
-									<a href="single.html">Watch ‘Bombay Velvet’ trailer during WC match</a>
-							
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-							<ul>
-								<li class="ent">
-									<a href="single.html"><img src="images/f1.jpg" alt="" /></a>
-								</li>
-								<li>
-									<a href="single.html">Watch ‘Bombay Velvet’ trailer during WC match</a>
-								
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-						</div>
-						<div class="might">
-				<h4>You might also like</h4>
-				<div class="might-grid">
-					<div class="grid-might">
-						<a href="single.html"><img src="images/mi.jpg" class="img-responsive" alt=""> </a>
-					</div>
-					<div class="might-top">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
-						<a href="single.html">Lorem Ipsum <i> </i></a>
-					</div>
-				<div class="clearfix"></div>
-				</div>
-				<div class="might-grid">
-					<div class="grid-might">
-						<a href="single.html"><img src="images/mi1.jpg" class="img-responsive" alt=""> </a>
-					</div>
-					<div class="might-top">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
-						<a href="single.html">Lorem Ipsum <i> </i></a>
-					</div>
-				<div class="clearfix"></div>
-				</div>
-				<div class="might-grid">
-					<div class="grid-might">
-						<a href="single.html"><img src="images/mi2.jpg" class="img-responsive" alt=""> </a>
-					</div>
-					<div class="might-top">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
-						<a href="single.html">Lorem Ipsum <i> </i></a>
-					</div>
-				<div class="clearfix"></div>
-				</div>
-				<div class="might-grid">
-					<div class="grid-might">
-						<a href="single.html"><img src="images/mi3.jpg" class="img-responsive" alt=""> </a>
-					</div>
-					<div class="might-top">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
-						<a href="single.html">Lorem Ipsum <i> </i></a>
-					</div>
-				<div class="clearfix"></div>
-				</div>
-			</div>
-			<!---->
-				<div class="grid-top">
-				<h4>Archives</h4>
-				<ul>
-					<li><a href="single.html">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </a></li>
-					<li><a href="single.html">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</a></li>
-					<li><a href="single.html">When an unknown printer took a galley of type and scrambled it to make a type specimen book. </a> </li>
-					<li><a href="single.html">It has survived not only five centuries, but also the leap into electronic typesetting</a> </li>
-					<li><a href="single.html">Remaining essentially unchanged. It was popularised in the 1960s with the release of </a> </li>
-					<li><a href="single.html">Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing </a> </li>
-					<li><a href="single.html">Software like Aldus PageMaker including versionsof Lorem Ipsum.</a> </li>
-				</ul>
-				</div>
-				<!---->
-
-					</div>
-
-					<div class="clearfix"></div>
+						<div class="clearfix"></div>
 			</div>
 			</div>
 		<div class="review-slider">
@@ -398,14 +281,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</script>
 		<script type="text/javascript" src="js/jquery.flexisel.js"></script>	
 		</div>		
-	<div class="footer">
-		<h6>Disclaimer : </h6>
-		<p class="claim">This is a freebies and not an official website, I have no intention of disclose any movie, brand, news.My goal here is to train or excercise my skill and share this freebies.</p>
-		<a href="example@mail.com">example@mail.com</a>
-		<div class="copyright">
-			<p> Template by  <a href="http://w3layouts.com">  W3layouts</a></p>
-		</div>
-	</div>	
+
 	<div class="clearfix"></div>
 	</div>
 </body>

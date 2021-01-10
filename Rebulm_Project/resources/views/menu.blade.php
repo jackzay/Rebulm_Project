@@ -10,6 +10,10 @@
             background-image: url(images/bg.png) ;
             background-size: cover;
             padding-bottom: 100px;
+            
+            
+        
+
         }
         /* Rebulm */
         #btn{

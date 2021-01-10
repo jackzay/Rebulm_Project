@@ -46,10 +46,10 @@ label{
 }
 .top-header {
 	padding: 1.25em 3em 1.25em 2em;
-	background: rgba(255, 255, 255, 0.47);
+	
 }
 .header {
-	background: url('/images/header-bg.jpg') no-repeat 0px 0px;
+	background: url('/images/Interstellar-header.jpg') no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -334,7 +334,7 @@ i.contact1 {
 	padding: 0px 10px 10px 0px;
 	width: 18%;
 	float: right;
-	border: 1px solid #f0f0f0;
+	/* border: 1px solid #f0f0f0; */
 }
 .search input[type="text"] {
 	outline: none;
@@ -541,7 +541,7 @@ p.claim {
 .right-content{
 	padding: 3em;
   border-top: 1px solid #000;
-  background:#fff;
+  background: url('../images/bg.png');
 }
 .content-grid{
 	width: 22.75%;
@@ -559,6 +559,7 @@ p.claim {
 	display:block;
 }
 .content-grid h3{
+	background-color: rgb(36, 24, 24);
 	color: #888;
 	text-transform: uppercase;
 	  padding: 1em;
@@ -588,7 +589,7 @@ p.claim {
 	display:block;
 }
 .button{
-	background: #000;
+	background: #9c7e21;
 	padding: 10px;
 	cursor: pointer;
 	border: none;
@@ -601,6 +602,7 @@ p.claim {
 	display: block;
 	margin: 10px 0 0 0;
 	font-size: 0.875em;
+	margin-top: 1px;
 }
 .button:hover{
 	color:#888;
@@ -651,7 +653,7 @@ p.claim {
 	background:#fff;
 }
 .reviews-section {
-	background: #fff;
+	background: url('../images/bg.png');
 	padding:3em;
 	border-top:1px solid #000;
 }
@@ -698,7 +700,7 @@ p.dirctr a {
 	margin: 2em 0;
 }
 p.ratingview {
-	color: #000;
+	color: rgb(255, 255, 255);
 	font-size: 1em;
 	font-weight: 600;
 	float: left;
@@ -729,7 +731,7 @@ p.ratingview {
 p.info {
 	font-size: 1em;
 	font-weight: 400;
-	color: #000;
+	color: rgb(255, 255, 255);
 	margin: 15px 0px;
 	height: 22px;
 	overflow: hidden;
@@ -1050,13 +1052,13 @@ font-weight: 700;
 	margin-top:2em;
 }
 .single h3{
-	color:#000;
+	color:rgb(255, 255, 255);
 	font-size:1.7em;
 	font-weight:600;
 	margin-bottom:1em;
 }
 .single p{
-	color:#000;
+	color:rgb(255, 255, 255);
 	font-size:1.4em;
 	font-weight:600;
 	margin-bottom:1em;
@@ -1075,19 +1077,19 @@ font-weight: 700;
 	border-bottom: 3px solid #000;
 }
 .story-review h4 {
-	color:#000;
+	color:rgb(255, 255, 255);
 	font-size:1.6em;
 	font-weight:600;
 	margin-bottom:0.7em;	
 }
 .best-review  h4 {
-	color:#000;
+	color:rgb(255, 255, 255);
 	font-size:1.6em;
 	font-weight:600;
 	margin-bottom:0.7em;	
 }
 .story-review p {
-	color:#000;	
+	color:rgb(255, 255, 255);	
 	font-weight: 400;
 	font-size: 1em;
 	line-height:1.8em;
@@ -1128,14 +1130,14 @@ font-weight: 700;
 .comments-section-grid-text h4 a{
 	font-weight:900;
 	font-size:16px;
-	color:#464851;
+	color:#c7c7c7;
 	text-decoration: none;
 }
 .comments-section-grid-text h4 a:hover{
 	color:#2DBEEA;
 }
 .comments-section-grid-text p{
-	color:#464851;
+	color:#c7c7c7;
 	font-size:0.95em;
 	font-weight:400;
 	margin:0.3em 0 1em 0;
@@ -1203,13 +1205,14 @@ font-weight: 700;
   font-size: 1em;
   font-weight: 600;
   width: 100%;
-  color: #FFFFFF;
+  color: #727272;
   text-transform: uppercase;
   font-style: normal;
   width: 20%;
+  background-color: #dfb636;
 }
 .blog-form input[type="button"]:hover {
-	background: #dfb636;
+	background: #ffe084;
 }
 /*-- responsive-design starts-here --*/
 

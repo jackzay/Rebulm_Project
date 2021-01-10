@@ -1,66 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Cinema A Entertainment Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
-    <link href="{{ asset('/css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
-    <!-- Custom Theme files -->
-    <link href="{{ asset('/css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
-    <!-- Custom Theme files -->
-    <script src="{{ asset('/js/jquery.min.js') }}"></script>
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> --}}
-    
-    <!-- Custom Theme files -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Cinema Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!--webfont-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-</head>
-<body>
-    {{-- <div class="full">
-        <div class="top-header" style="background-color: rgb(36, 24, 24);">
-            <div class="logo">
-                <a href="index.html"><img src="images/logo.png" alt="" /></a>
-                <p>Movie Theater</p>
-            </div>
-            <a href="#" style="color:#D0D0D0;
-            font-size:1.35em;
-            letter-spacing:2px;
-            text-transform:uppercase;
-            padding:4px 0 0px 20px;
-            margin:8px 0 0px 20px;
-            display: inline-block;">home</a>
-            
-            <a href="#" style="color:#D0D0D0;
-            font-size:1.35em;
-            letter-spacing:2px;
-            text-transform:uppercase;
-            padding:4px 0 0px 20px;
-            margin:8px 0 0px 20px;
-            display: inline-block;">Movie</a>	
-
-            <a href="#" style="color:#D0D0D0;
-            font-size:1.35em;
-            letter-spacing:2px;
-            text-transform:uppercase;
-            padding:4px 0 0px 20px;
-            margin:8px 0 0px 20px;
-            display: inline-block;">Profile</a>
-            <!-- <div class="nav" ></div> -->
-            <div class="search">
-                <form>
-                    <input type="text" value="Search.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search..';}"/>
-                    <input type="submit" value="">
-                </form>
-            </div>
+    <head>
+        <title>Home Admin</title>
+        <link href="{{ asset('/css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+        <!-- Custom Theme files -->
+        <link href="{{ asset('/css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
+        <!-- Custom Theme files -->
+        <script src="{{ asset('/js/jquery.min.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         
-            <div class="clearfix"></div>
-        </div> --}}
-        <main>
-            @yield('content')
-        </main>
-    {{-- </div> --}}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Cinema Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!--webfont-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    </head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md bg-faded justify-content-center" style="background-color: rgb(36, 24, 24);">
+        <a href="/" class="navbar-brand d-flex w-50 mr-auto"
+            style="color:#D0D0D0; 
+            font-size:1.6em; 
+            letter-spacing:2px; 
+            text-transform:uppercase;">
+
+            <img src="images/logo.png" width="150" class="d-inline-block align-top" alt="">
+            &nbsp;| Admin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+            <ul class="navbar-nav w-100 justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" 
+                        style="font-size:1.2em; 
+                        letter-spacing:1px; 
+                        text-transform:uppercase;"
+                    href="/admin">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" 
+                        style="font-size:1.2em; 
+                        letter-spacing:1px; 
+                        text-transform:uppercase;"
+                    href="/add_movies">ADD MOVIE</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" 
+                        style="font-size:1.2em; 
+                        letter-spacing:1px; 
+                        text-transform:uppercase;"
+                    href="/feedback">FEEDBACK</a>
+                  </li>
+            </ul>
+            <ul class="nav navbar-nav mt-1 ml-auto w-100 justify-content-end">
+                <li class="nav-item">
+                    <div class="dropdown show ">
+                        <a class="btn btn-default dropdown-toggle"
+                          style="color:#D0D0D0; 
+                          font-size:1.2em; 
+                          /* letter-spacing:1px;  */
+                          /* text-transform:uppercase;" */
+                        href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Halo, Admin
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#">Profile</a>
+                          <a class="dropdown-item" href="#">FaQ</a>
+                          <a class="dropdown-item" href="/login">Logout</a>
+                        </div>
+                      </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+{{-- isi kontennya disini --}}
+@yield('content')
+{{-- nyampe sini --}}
 </body>
 </html>

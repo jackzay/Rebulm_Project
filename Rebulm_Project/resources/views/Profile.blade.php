@@ -42,24 +42,25 @@
         margin:8px 0 0px 20px;
         display: inline-block;">Movie</a>
 
-        <a href="#" style="color:#D0D0D0;
+        <a href="/profile" style="color:#D0D0D0;
         font-size:1.35em;
         letter-spacing:2px;
         text-transform:uppercase;
         padding:4px 0 0px 20px;
         margin:8px 0 0px 20px;
         display: inline-block;">Profile</a>
-        <div class="search v-search">
-            <form>
-                <input type="text" value="Search.." onfocus="this.value = '';"
-                    onblur="if (this.value == '') {this.value = 'Search..';}" />
-                <input type="submit" value="">
-            </form>
-        </div>
+          <a href="/login" style="color:#D0D0D0;
+				font-size:1.35em;
+				letter-spacing:2px;
+				text-transform:uppercase;
+				padding:4px 0 0px 20px;
+				margin:8px 0 0px 20px;
+				margin-left:22%;
+				display: inline-block;">Keluar</a>
         <div class="clearfix"></div>
     </div>
     <h1 style="text-align: center; color:white; margin-top:10px">WELCOME TO YOURS</h1>
-    <h1 style="text-align: center; color:white;"">PROFILE</h1>
+    <h1 style="text-align: center; color:white;">PROFILE</h1>
 
     <div class="col d-flex justify-content-center container mt-3">
         <div class="card border-dark card w-50">

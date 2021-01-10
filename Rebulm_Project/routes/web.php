@@ -45,3 +45,12 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
+Route::get('/transaksi', function () {
+    return view('transaksi');
+});
+Route::get('/menu', function () {
+    return view('menu');
+});
+Route::get('/faq', function () {
+    return view('faq');
+});
