@@ -16,6 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/admin', function () {
+    return view('admin.home_admin');
+});
+Route::get('/add_movies', function () {
+    return view('admin.add_movies');
+});
+Route::get('/edit_movies', function () {
+    return view('admin.edit_movies');
+});
+Route::get('/feedback', function () {
+    return view('admin.feedback');
+});
+
 Route::get('/movies', function () {
     return view('videos');
 });
