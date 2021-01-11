@@ -1,6 +1,8 @@
 @extends('layouts.navbar')
 
 @section('content')
+    
+
 <style>
     .right-content2{
 	    padding: 3em;
@@ -16,26 +18,39 @@
     </div>
     <div class="d-flex justify-content-center" style="margin-top: 10px;">
 
-        <form action="/product" method="POST" enctype="multipart/form-data" style="width: 1000px">
-    
+        @foreach ($movie as $movie)
+        <form action="/admin/{{$movie->id_movie}}" method="POST" enctype="multipart/form-data" style="width: 1000px">
+            @csrf
+            @method('PUT')
+            
             <div class="from-group" >
                 <label for="title">Title</label>
-                <input type="text" class="form-control" id="title" name="title">
+                <input type="text" class="form-control" id="title" name="title" value="{{$movie->movie_title}}">
             </div>
     
             <div class="form-group">
                 <label for="synopsis">Synopsis</label>
-                <textarea class="form-control" id="synopsis" name="synopsis" rows="3"></textarea>
+                <textarea class="form-control" id="synopsis" name="synopsis" rows="3">{{$movie->synopsis}}</textarea>
             </div>
 
             <div class="from-group">
                 <label for="release">Release Year</label>
-                <input type="number" class="form-control" id="release" name="release">
+                <input type="number" class="form-control" id="release" name="release" value="{{$movie->year}}">
             </div>
 
             <div class="from-group" >
-                <label for="price"">Price</label>
-                <input type="text" class="form-control" id="price" name="price">
+                <label for="price"">Director</label>
+                <input type="text" class="form-control" name="director" value="{{$movie->director}}">
+            </div>
+
+            <div class="from-group" >
+                <label for="price"">Actress</label>
+                <input type="text" class="form-control" name="actress" value="{{$movie->actress}}">
+            </div>
+
+            <div class="from-group" >
+                <label for="price"">Rating</label>
+                <input type="number" class="form-control" name="rating" value="{{$movie->rating}}">
             </div>
             
             <div class="custom-file" style="margin-top: 30px; margin-bottom: 30px">
@@ -46,6 +61,7 @@
                 <button type="submit" class="btn btn-success">Submit</button>
             </div>
         </form>
+        @endforeach
     </div>
 </div>
 

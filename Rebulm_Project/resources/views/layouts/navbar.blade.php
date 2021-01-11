@@ -45,14 +45,14 @@
                         style="font-size:1.2em; 
                         letter-spacing:1px; 
                         text-transform:uppercase;"
-                    href="/add_movies">ADD MOVIE</a>
+                    href="/admin/add_movies">ADD MOVIE</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" 
                         style="font-size:1.2em; 
                         letter-spacing:1px; 
                         text-transform:uppercase;"
-                    href="/feedback">FEEDBACK</a>
+                    href="/admin/feedback">FEEDBACK</a>
                   </li>
             </ul>
             <ul class="nav navbar-nav mt-1 ml-auto w-100 justify-content-end">

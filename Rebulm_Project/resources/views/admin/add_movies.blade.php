@@ -18,8 +18,9 @@
     </div>
     <div class="d-flex justify-content-center" style="margin-top: 10px;">
 
-        <form action="/product" method="POST" enctype="multipart/form-data" style="width: 1000px">
-    
+        <form action="/admin" method="POST" enctype="multipart/form-data" style="width: 1000px">
+            @csrf
+            
             <div class="from-group" >
                 <label for="title">Title</label>
                 <input type="text" class="form-control" id="title" name="title">
@@ -36,8 +37,18 @@
             </div>
 
             <div class="from-group" >
-                <label for="price"">Price</label>
-                <input type="text" class="form-control" id="price" name="price">
+                <label for="price"">Director</label>
+                <input type="text" class="form-control" name="director">
+            </div>
+
+            <div class="from-group" >
+                <label for="price"">Actress</label>
+                <input type="text" class="form-control" name="actress">
+            </div>
+
+            <div class="from-group" >
+                <label for="price"">Rating</label>
+                <input type="number" class="form-control" name="rating">
             </div>
             
             <div class="custom-file" style="margin-top: 30px; margin-bottom: 30px">

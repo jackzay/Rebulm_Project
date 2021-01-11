@@ -40,52 +40,29 @@
 		<div id="small-dialog" class="mfp-hide">
 			<iframe  src="https://www.youtube.com/embed/2LqzF5WauAw" frameborder="0" allowfullscreen></iframe>
 		</div>
-		<div class="content-grid">
-			<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum1.jpg" title="allbum-name" /></a>
-			<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-			<ul>
-				<li><a href="#"><img src="images/likes.png" title="image-name" /></a></li>
-				<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
-				<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
-			</ul>
-			<a class="button" href="/edit_movies">Update</a>
-			<a class="button" href="#small-dialog">Delete</a>
+		<div class="d-flex justify-content-center" style="margin-top: 20px">
+			<div class="row">
+		@foreach ($movies as $movie)
+		<div class="col-3 mb-3">
+			<div class="card" style="width: 300px">
+				<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/{{$movie->img_path}}" title="allbum-name" style="width: 300px"/></a>
+				
+				<div class="card-body ">
+					<h4 class="card-title">{{$movie->movie_title}}</h4>
+					<a class="btn btn-success" href="/admin/{{$movie-> id_movie}}/edit_movie">Edit</a>
+
+					<form action="/admin/{{ $movie->id_movie}}" method ="POST" style="display: inline-block">
+						@csrf
+						@method('DELETE')
+						<button class="btn btn-danger">Delete</button>
+					</form>
+				</div>
+			</div>
 		</div>
 
-		<div class="content-grid">
-			<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum2.jpg" title="allbum-name" /></a>
-			<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-			<ul>
-				<li><a href="#"><img src="images/likes.png" title="image-name" /></a></li>
-				<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
-				<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
-			</ul>
-			<a class="button" href="#small-dialog">Update</a>
-			<a class="button" href="#small-dialog">Delete</a>
+		@endforeach
+			</div>
 		</div>
-
-		<div class="content-grid">
-			<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum3.jpg" title="allbum-name" /></a>
-			<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-			<ul>
-				<li><a href="#"><img src="images/likes.png" title="image-name" /></a></li>
-				<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
-				<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
-			</ul>
-			<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
-		</div>
-
-		<div class="content-grid last-grid">
-			<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum4.jpg" title="allbum-name" /></a>
-			<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-			<ul>
-				<li><a href="#"><img src="images/likes.png" title="image-name" /></a></li>
-				<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
-				<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
-			</ul>
-			<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
-		</div>
-
 		
 		<div class="clearfix"> </div>
 		<!---start-pagenation----->
