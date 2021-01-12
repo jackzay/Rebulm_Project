@@ -38,15 +38,17 @@ class MovieController extends Controller
             'director' => $request -> director,
             'actress' => $request -> actress,
             'rating' => $request -> rating,
+            'trailer' => $request -> trailer,
             'img_path' => $imgName
         ]);
 
         return redirect('/admin');
     }
 
-    public function show($id)
+    public function review($id)
     {
-        //
+        $movie = Movie::where('id_movie',$id) -> first();
+        return view('user.review', compact('movie'));
     }
 
     public function edit($id)
@@ -76,6 +78,7 @@ class MovieController extends Controller
             'director' => $request -> director,
             'actress' => $request -> actress,
             'rating' => $request -> rating,
+            'trailer' => $request -> trailer,
             'img_path' => $imgName
         ]);
 
@@ -96,10 +99,29 @@ class MovieController extends Controller
         return view('admin.feedback', compact('feedbacks'));
     }
 
-    public function create_feedback()
+    // public function create_feedback()
+    // {
+    //     return view('user.review');
+    // }
+
+    public function store_feedback(Request $request)
     {
-        return view('review');
+
+        Feedback::create([
+            'comment' => $request -> comment,
+            'id_movie' => $request -> id_movie,
+        ]);
+
+        return back();
     }
+
+    //transaction
+    public function transaction($id)
+    {
+        $movie = Movie::where('id_movie',$id) -> first();
+        return view('user.transaksi', compact('movie'));
+    }
+
 
 
 }

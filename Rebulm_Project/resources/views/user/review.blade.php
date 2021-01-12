@@ -1,7 +1,6 @@
+@extends('layouts.user')
 
-<!DOCTYPE html>
-<html>
-<head>
+@section('head')
 	<title>Cinema A Entertainment Category Flat Bootstarp Resposive Website Template | Single :: w3layouts</title>
 	<link href="{{ asset('/css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
 	<!-- Custom Theme files -->
@@ -39,77 +38,25 @@
 			
 			}	
 	</style>
-</head>
-<body>
-	<nav class="navbar navbar-dark navbar-expand-md bg-faded justify-content-center" style="background-color: rgb(36, 24, 24);">
-        <a href="/" class="navbar-brand d-flex w-50 mr-auto"
-            style="color:#D0D0D0; 
-            font-size:1.6em; 
-            letter-spacing:2px; 
-            text-transform:uppercase;">
+@endsection
 
-            <img src="images/logo.png" width="150" class="d-inline-block align-top" alt="">
-            &nbsp;| Movie </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
-            <ul class="navbar-nav w-100 justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" 
-                        style="font-size:1.2em; 
-                        letter-spacing:1px; 
-                        text-transform:uppercase;"
-                    href="/">HOME</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" 
-                        style="font-size:1.2em; 
-                        letter-spacing:1px; 
-                        text-transform:uppercase;"
-                    href="/movies">Movies</a>
-                  </li>
-                  
-            </ul>
-            <ul class="nav navbar-nav mt-1 ml-auto w-100 justify-content-end">
-                <li class="nav-item">
-                    <div class="dropdown show ">
-                        <a class="btn btn-default dropdown-toggle"
-                          style="color:#D0D0D0; 
-                          font-size:1.2em; 
-                          /* letter-spacing:1px;  */
-                          /* text-transform:uppercase;" */
-                        href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Halo, User
-                        </a>
-                      
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a class="dropdown-item" href="/profile">Profile</a>
-                          <a class="dropdown-item" href="/">FaQ</a>
-                          <a class="dropdown-item" href="/login">Logout</a>
-                        </div>
-                      </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-	<!-- header-section-starts -->
-	
+@section('content')
 	<div class="reviews-section">
 		<div class="col-md-9 reviews-grids" style="background-color: rgb(36, 24, 24);color:white; left:10%; padding-top:20px">
 			<div class="embed-responsive embed-responsive-16by9">
-				<iframe width="960" height="600"  src="https://www.youtube.com/embed/RWX2Kis5yYM" frameborder="0" style="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe width="960" height="600"  src="{{$movie->trailer}}" frameborder="0" style="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div> 
 			<div class="review" >
 				<div class="movie-pic">
-					<a href="single.html"><img src="images/SpidermanFFH.jpg" alt="" /></a>
+					<a href="#"><img src="{{asset('images/'. $movie->img_path)}}" alt="" /></a>
 				</div>
 				
 				<div class="review-info" >
 				<hr size="10px">
-					<a class="span" href="single.html" style="color:white">Lorem  <i>Movie Review</i></a>
-					<p class="dirctr" style="color:white"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
-					<p class="ratingview">Critic's Rating:</p>
+					<a class="span" href="single.html" style="color:white; text-transform:uppercase;"><i>{{$movie->movie_title}}</i></a>
+					<br>
+					{{-- <p class="dirctr" style="color:white"><a href=""></p> --}}
+					<p class="ratingview">Rating:</p>
 					<div class="rating">
 						<span>☆</span>
 						<span>☆</span>
@@ -118,19 +65,8 @@
 						<span>☆</span>
 					</div>
 					<p class="ratingview">
-					&nbsp;3.5/5  
+					&nbsp;{{$movie->rating}}/10  
 					</p>
-					<div class="clearfix"></div>
-					<p class="ratingview c-rating">Avg Readers' Rating:</p>
-					<div class="rating c-rating">
-						<span>☆</span>
-						<span>☆</span>
-						<span>☆</span>
-						<span>☆</span>
-						<span>☆</span>
-					</div> 	
-					<p class="ratingview c-rating">								
-					&nbsp; 3.3/5</p>
 					<div class="clearfix"></div>
 					<div class="yrw">
 					
@@ -141,95 +77,97 @@
 							<a href="/transaksi">Buy this Movie</a>
 						</div>
 						<div class="wt text-center">
-							<a href="/menu">More</a>
+							<a href="/home/movies/{{$movie->id_movie}}/menu">More</a>
 						</div>
 						<div class="clearfix"></div>
 					</div>
-					<p class="info">CAST:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Will Smith, Margot Robbie, Adrian Martinez, Rodrigo Santoro, BD Wong, Robert Taylor</p>
-					<p class="info">DIRECTION: &nbsp;&nbsp;&nbsp;&nbsp;Glenn Ficarra, John Requa</p>
-					<p class="info">GENRE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crime</p>
-					<p class="info">DURATION:&nbsp;&nbsp;&nbsp; &nbsp; 1 hour 45 minutes</p>
+					<p class="info">CAST:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$movie->actress}}</p>
+					<p class="info">DIRECTOR:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$movie->director}}</p>
+					<p class="info">YEAR RELEASE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{$movie->year}}</p>
+					<p class="info">DURATION:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 1 hour 45 minutes</p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
 			<div class="single" style="color:white">
-				<h3>Lorem Ipsum IS A TENSE, TAUT, COMPELLING THRILLER</h3>
-				<p>STORY:<i> Meera and Arjun drive down Lorem Ipsum - can they survive a highway from hell?</i></p>
+				<h3>SYNOPSIS :</h3>
+				<p><i> {{$movie->synopsis}}</i></p>
 			</div>
 			<div class="best-review" style="color:white">
-				<h4>Best Reader's Review</h4>
-				<p>Excellent Movie and great performance by Lorem, one of the finest thriller of recent  like Aldus PageMaker including versions of Lorem Ipsum.</p>
-				<p><span>Neeraj Upadhyay (Noida)</span> 16/03/2015 at 12:14 PM</p>
-			</div>
-			<div class="story-review" style="color:white">
-				<h4>REVIEW:</h4>
-				<p>So,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-			</div>
 							<!-- comments-section-starts -->
-			<div class="comments-section" style="color:white">
-				<div class="comments-section-head" style="color:white">
-					<div class="comments-section-head-text" style="color:white">
-						<h3>Comments</h3>
+				<div class="comments-section" style="color:white">	
+					<div class="comments-section-head" style="color:white">
+						<div class="comments-section-head-text" style="color:white">
+							<h3>Comments</h3>
+						</div>
+						<div class="clearfix"></div>
 					</div>
-					<div class="clearfix"></div>
+
+					<div class="comments-section-grids">
+						@foreach ($movie->feedbacks as $feedback)
+							<div class="comments-section-grid">
+								<div class="col-md-2 comments-section-grid-image">
+									<img src="{{asset('images/eye-brow.jpg')}}" class="img-responsive" alt="" />
+								</div>
+								<div class="col-md-10 comments-section-grid-text">
+									<h4><a href="#">USER</a></h4>
+									<label>{{$feedback->created_at}}  </label>
+									<p>{{$feedback->comment}}</p>
+									<span><a href="#">Reply</a></span>
+									<i class="rply-arrow"></i>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						@endforeach
+
+
+						{{-- <div class="comments-section-grid comments-section-middle-grid">
+							<div class="col-md-2 comments-section-grid-image">
+								<img src="{{asset('images/beauty.jpg')}}" class="img-responsive" alt="" />
+							</div>
+							<div class="col-md-10 comments-section-grid-text">
+								<h4><a href="#">MARWA ELGENDY</a></h4>
+								<label>5/4/2014 at 22:00   </label>
+								<p>But I must explain to you how all this idea denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound but because those who do not know how to pursue pleasure rationally encounter consequences.</p>
+								<span><a href="#">Reply</a></span>
+								<i class="rply-arrow"></i>
+							</div>
+							<div class="clearfix"></div>
+						</div> --}}
+
+						{{-- <div class="comments-section-grid">
+							<div class="col-md-2 comments-section-grid-image">
+								<img src="{{asset('images/stylish.jpg')}}" class="img-responsive" alt="" />
+							</div>
+							<div class="col-md-10 comments-section-grid-text">
+								<h4><a href="#">MARWA ELGENDY</a></h4>
+								<label>5/4/2014 at 22:00   </label>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound but because those who do not know how to pursue pleasure rationally encounter consequences.</p>
+								<span><a href="#">Reply</a></span>
+								<i class="rply-arrow"></i>
+							</div>
+							<div class="clearfix"></div>
+						</div> --}}
+					</div>
 				</div>
-				<div class="comments-section-grids">
-					<div class="comments-section-grid">
-						<div class="col-md-2 comments-section-grid-image">
-							<img src="images/eye-brow.jpg" class="img-responsive" alt="" />
+				<!-- comments-section-ends -->
+				<div class="reply-section">
+					<div class="reply-section-head">
+						<div class="reply-section-head-text">
+							<h3>Leave Comment</h3>
 						</div>
-						<div class="col-md-10 comments-section-grid-text">
-							<h4><a href="#">MARWA ELGENDY</a></h4>
-							<label>5/4/2014 at 22:00   </label>
-							<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound but because those who do not know how to pursue pleasure rationally encounter consequences.</p>
-							<span><a href="#">Reply</a></span>
-							<i class="rply-arrow"></i>
-						</div>
-						<div class="clearfix"></div>
+					</div> 
+					<div class="blog-form">
+						<form action="/home/movies/{{$movie->id_movie}}/review" method="POST" enctype="multipart/form-data">
+							@csrf
+							<input type="hidden" name="id_movie" value="{{$movie->id_movie}}">
+							<input type="text" class="text" value="Enter Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Name';}">								
+							<div class="form-group">
+								<textarea class="form-control" name="comment" rows="3"></textarea>
+							</div>
+				
+							<input type="submit" class="btn btn-success" value="SUBMIT COMMENT">
+						</form>
 					</div>
-					<div class="comments-section-grid comments-section-middle-grid">
-						<div class="col-md-2 comments-section-grid-image">
-							<img src="images/beauty.jpg" class="img-responsive" alt="" />
-						</div>
-						<div class="col-md-10 comments-section-grid-text">
-							<h4><a href="#">MARWA ELGENDY</a></h4>
-							<label>5/4/2014 at 22:00   </label>
-							<p>But I must explain to you how all this idea denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound but because those who do not know how to pursue pleasure rationally encounter consequences.</p>
-							<span><a href="#">Reply</a></span>
-							<i class="rply-arrow"></i>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="comments-section-grid">
-						<div class="col-md-2 comments-section-grid-image">
-							<img src="images/stylish.jpg" class="img-responsive" alt="" />
-						</div>
-						<div class="col-md-10 comments-section-grid-text">
-							<h4><a href="#">MARWA ELGENDY</a></h4>
-							<label>5/4/2014 at 22:00   </label>
-							<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound but because those who do not know how to pursue pleasure rationally encounter consequences.</p>
-							<span><a href="#">Reply</a></span>
-							<i class="rply-arrow"></i>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-			</div>
-	  <!-- comments-section-ends -->
-			<div class="reply-section">
-				<div class="reply-section-head">
-					<div class="reply-section-head-text">
-						<h3>Leave Reply</h3>
-					</div>
-				</div> 
-				<div class="blog-form">
-					<form>
-						<input type="text" class="text" value="Enter Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Name';}">
-						<input type="text" class="text" value="Enter Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Email';}">
-						<input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}">
-						<textarea></textarea>
-						<input type="button" value="SUBMIT COMMENT">
-					</form>
 				</div>
 			</div>
 		</div>
@@ -275,5 +213,5 @@
 			<script type="text/javascript" src="js/jquery.flexisel.js"></script>	
 		</div>		
 		<div class="clearfix"></div>
-</body>
-</html>
+@endsection
+

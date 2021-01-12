@@ -52,6 +52,11 @@
                 <label for="price"">Rating</label>
                 <input type="number" class="form-control" name="rating" value="{{$movie->rating}}">
             </div>
+
+            <div class="from-group" >
+                <label for="price"">Trailer(embed)</label>
+                <input type="text" class="form-control" name="trailer" value="{{$movie->trailer}}">
+            </div>
             
             <div class="custom-file" style="margin-top: 30px; margin-bottom: 30px">
                 <input type="file" class="custom-file-input" id="img_path" name="img_path">

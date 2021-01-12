@@ -27,7 +27,25 @@
 					<th>Feedback</th>
 				</tr>
 			</thead>
-
+			@foreach ($feedbacks as $feedback)
+			<tr>
+				<td>{{$loop->iteration}}</td>
+				<td style="width: 500px">
+					{{-- @foreach ($feedback->movies as $movie)
+						{{$movie->movie_title}}
+					@endforeach --}}
+				</td>
+				<td>{{}}</td>
+				{{-- <td>
+					<a href="/product/{{$product-> id}}/edit" class="btn btn-primary">Edit</a>
+					<form action="/product/{{ $product-> id }}" method ="POST" style="display: inline-block">
+						@csrf
+						@method('DELETE')
+						<button class="btn btn-danger">Delete</button>
+					</form>
+				</td> --}}
+			</tr>
+		@endforeach
 		</table>
 	</div>
 
