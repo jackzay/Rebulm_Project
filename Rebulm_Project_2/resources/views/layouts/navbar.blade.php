@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Home Admin</title>
+        <title>Admin</title>
         <link href="{{ asset('/css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
         <!-- Custom Theme files -->
         <link href="{{ asset('/css/style.css') }}" rel="stylesheet" type="text/css" media="all" />

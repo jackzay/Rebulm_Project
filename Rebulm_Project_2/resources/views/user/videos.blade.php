@@ -1,7 +1,7 @@
 @extends('layouts.user')
 
 @section('head')
-	<title>Cinema A Entertainment Category Flat Bootstarp Resposive Website Template | Videos :: w3layouts</title>
+	<title>Movies</title>
 	<link href="{{ asset('/css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
 	<!-- Custom Theme files -->
 	<link href="{{ asset('/css/style.css') }}" rel="stylesheet" type="text/css" media="all" />

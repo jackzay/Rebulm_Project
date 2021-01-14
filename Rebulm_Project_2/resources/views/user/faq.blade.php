@@ -1,6 +1,7 @@
 @extends('layouts.user')
 
 @section('head')
+	<title>FaQ</title>
 	<link href="{{ asset('/css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
 	<!-- Custom Theme files -->
 	<link href="{{ asset('/css/style.css') }}" rel="stylesheet" type="text/css" media="all" />

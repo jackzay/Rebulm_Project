@@ -1,7 +1,7 @@
 @extends('layouts.user')
 
 @section('head')
-	<title>Cinema A Entertainment Category Flat Bootstarp Resposive Website Template | Single :: w3layouts</title>
+	<title>Review</title>
 	<link href="{{ asset('/css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
 	<!-- Custom Theme files -->
 	<link href="{{ asset('/css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
@@ -139,7 +139,7 @@
 							@csrf
 							<input type="hidden" name="id_movie" value="{{$movie->id_movie}}">
 							<input type="hidden" name="id_user" value="{{Auth::user()->id}}">
-							<input type="text" class="text" value="Enter Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Name';}">								
+							{{-- <input type="text" class="text" value="Enter Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Name';}">								 --}}
 							<div class="form-group">
 								<textarea class="form-control" name="comment" rows="3"></textarea>
 							</div>
